@@ -1,4 +1,4 @@
-baseURL = "spacding.github.io"
+baseURL = "https://spacding.github.io/Notion-Hugo/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "ananke"
