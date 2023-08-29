@@ -3,7 +3,7 @@ import { UserConfig } from "./src/config"
 const userConfig: UserConfig = {
     mount: {
         manual: false,
-        page_url: 'https://spacinc.notion.site/Notion-DoIt-4f04245df88d4473b50b21298e5ad30c',
+        page_url: 'https://www.notion.so/spacinc/Notion-DoIt-4f04245df88d4473b50b21298e5ad30c?pvs=4',
         pages: [
             // {
             //     page_id: '<page_id>',
