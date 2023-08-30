@@ -43,7 +43,7 @@ footnotereturnlinkcontents = "↩"
 # 自定义参数
 [params]
   # 网站描述
-  description = "人这一生，抛去自己的喜乐悲愁，最终还是要归于尘土，所留下的，无非就是一个或长或短的故事而已。所以你到底想给这个世界留下怎样的一个故事呢 ？——Xiao Hanyu"
+  description = "人这一生，抛去自己的喜乐悲愁，最终还是要归于尘土，所留下的，无非就是一个或长或短的故事而已。"
   # 页脚
   footer = "&copy; [Aseity](https://blog.aseity.me) | since 2020"
   # 
