@@ -1,4 +1,4 @@
 baseURL = "https://spacding.github.io"
 languageCode = "zh-CN"
 title = "Aseity Blog"
-theme = "hugo-paper"
+theme = "Ivy"
