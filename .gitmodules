@@ -4,3 +4,6 @@
 [submodule "themes/ananke"]
 	path = themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/hugo-theme-yinyang"]
+	path = themes/hugo-theme-yinyang
+	url = https://github.com/spacding/hugo-theme-yinyang.git
