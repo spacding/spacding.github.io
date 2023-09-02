@@ -6,6 +6,11 @@ on:
   - cron: "0 0,0,12,23 * * *"
   watch:
     types: [started]
+    
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   douban:
