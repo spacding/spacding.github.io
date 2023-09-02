@@ -88,6 +88,8 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
 // 获取页面的 "date" 属性值，并进行类型断言
   const dateProperty = page.properties.date as { date: { start: string } } | undefined;
   const mydateValue = dateProperty ? dateProperty.date.start : null;
+  // 使用条件表达式处理 mydateValue 为 null 的情况
+  const dateForFrontMatter = mydateValue !== null ? mydateValue : '';
 
   //以上为自己添加内容
   const title = getPageTitle(page);
@@ -98,7 +100,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   > = {
     title,
     // date: page.created_time,
-    date: mydateValue,
+    date: dateForFrontMatter,
     lastmod: page.last_edited_time,
     draft: false,
   };
