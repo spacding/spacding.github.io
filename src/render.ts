@@ -82,13 +82,31 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   if (page_expiry_time) nearest_expiry_time = page_expiry_time
   const mdString = n2m.toMarkdownString(mdblocks);
   page.properties.Name;
-  // 以下为自己添加内容
+  //// 以下为自己添加内容
   // 获取页面的 "date" 属性值，并进行类型断言
   const dateProperty = page.properties.date as { date: { start: string } } | undefined;
   const mydateValue = dateProperty ? dateProperty.date.start : null;
   // 使用条件表达式处理 mydateValue 为 null 的情况
   const dateForFrontMatter = mydateValue !== null ? mydateValue : '';
-  //以上为自己添加内容
+
+  // draft值的确定
+  const statusProperty = page.properties.status as {
+    select: {
+      id: string;
+      name: string;
+    } | null;
+  } | undefined;
+  // 默认将 draft 设置为 true
+  let isDraft = true;
+  
+  if (statusProperty && statusProperty.select) {
+    // 如果 status 属性的值为 "Done"，则将 isDraft 设置为 false
+    if (statusProperty.select.name === "Done") {
+      isDraft = false;
+    }
+  }
+
+  // 以上为自己修改
   const title = getPageTitle(page);
   const frontMatter: Record<
     string,
@@ -98,7 +116,8 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     // date: page.created_time,
     date: dateForFrontMatter,
     lastmod: page.last_edited_time,
-    draft: false,
+    // draft: false,
+    draft: isDraft,
   };
 
 
