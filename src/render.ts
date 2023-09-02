@@ -82,15 +82,20 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   if (page_expiry_time) nearest_expiry_time = page_expiry_time
   const mdString = n2m.toMarkdownString(mdblocks);
   page.properties.Name;
+  // 以下为自己添加内容
+  // 获取页面的日期属性
+  // 获取页面的 "date" 属性值
+  const dateProperty = page.properties.date;
+  const mydateValue = dateProperty ? dateProperty.date.start : null;
+  //以上为自己添加内容
   const title = getPageTitle(page);
   const frontMatter: Record<
     string,
     string | string[] | number | boolean | PageObjectResponse
   > = {
     title,
-    // 页面创建时间
     // date: page.created_time,
-    date: page.properties.date,
+    date: mydateValue,
     lastmod: page.last_edited_time,
     draft: false,
   };
