@@ -7,7 +7,7 @@ title = "Aseity Life"
 # 网站主题
 theme = "Ivy"
 # 网站logo
-avatar = "/static/avatar.png"  # 这里是你的avatar图片文件的路径
+avatar = "/static/favicon.ico"  # 这里是你的avatar图片文件的路径
 
 disqusShortname = "Aseity"
 hasCJKLanguage = true
@@ -31,8 +31,7 @@ footnotereturnlinkcontents = "↩"
   weight="2"
   [[menu.main]]
   name="阅读"
-  # url="/books/"
-  url="themes/Ivy/layouts/_default/books.html"
+  url="/books/"
   weight="3"
   [[menu.main]]
   name="书目"
