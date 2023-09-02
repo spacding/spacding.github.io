@@ -6,6 +6,8 @@ languageCode = "zh-CN"
 title = "Aseity Life"
 # 网站主题
 theme = "Ivy"
+# 网站logo
+avatar = "/static/avatar.png"  # 这里是你的avatar图片文件的路径
 
 disqusShortname = "Aseity"
 hasCJKLanguage = true
