@@ -31,7 +31,8 @@ footnotereturnlinkcontents = "↩"
   weight="2"
   [[menu.main]]
   name="阅读"
-  url="/books/"
+  # url="/books/"
+  url="themes/Ivy/layouts/_default/books.html"
   weight="3"
   [[menu.main]]
   name="书目"
