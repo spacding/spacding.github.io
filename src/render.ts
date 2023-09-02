@@ -91,7 +91,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
 
   //以上为自己添加内容
   const title = getPageTitle(page);
-  /*
+
   const frontMatter: Record<
     string,
     string | string[] | number | boolean | PageObjectResponse
@@ -102,15 +102,8 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     lastmod: page.last_edited_time,
     draft: false,
   };
-  */
-  // 声明 frontMatter 在函数内部
-  let frontMatter: Record<string, any> = {};
 
-  // 设置 frontMatter
-  frontMatter.title = page.properties.title[0].plain_text;
-  frontMatter.date = mydateValue as string;
-  frontMatter.lastmod = page.last_edited_time;
-  frontMatter.draft = false;
+
 
   // set featuredImage
   const featuredImageLink = await getCoverLink(page.id, notion);
