@@ -88,7 +88,9 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     string | string[] | number | boolean | PageObjectResponse
   > = {
     title,
-    date: page.created_time,
+    // 页面创建时间
+    // date: page.created_time,
+    date: page.properties.date,
     lastmod: page.last_edited_time,
     draft: false,
   };
