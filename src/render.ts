@@ -90,7 +90,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   const dateForFrontMatter = mydateValue !== null ? mydateValue : '';
 
   // draft值的确定
-  const statusProperty = page.properties.status as {
+  const statusProperty = page.properties.select as {
     select: {
       id: string;
       name: string;
@@ -101,7 +101,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   
   if (statusProperty && statusProperty.select) {
     // 如果 status 属性的值为 "Done"，则将 isDraft 设置为 false
-    if (statusProperty.select.name === "Done") {
+    if (statusProperty.select.name === "Published") {
       isDraft = false;
     }
   }
