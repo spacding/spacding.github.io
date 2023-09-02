@@ -108,7 +108,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
 
   // 设置 frontMatter
   frontMatter.title = page.properties.title[0].plain_text;
-  frontMatter.date = mydateValue;
+  frontMatter.date = mydateValue as string;
   frontMatter.lastmod = page.last_edited_time;
   frontMatter.draft = false;
 
