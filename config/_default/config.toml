@@ -16,7 +16,6 @@ footnotereturnlinkcontents = "↩"
 
 [permalinks]
   posts = "/posts/:year/:month/:slug/"
-  newsletter = "/newsletter/:year/:month/:slug/"
 
 # 菜单参数，通过.Site.Menus.main获取参数
 # Name为菜单名称、Weight为菜单排序参数、URL为菜单
@@ -34,13 +33,13 @@ footnotereturnlinkcontents = "↩"
   url="/books/"
   weight="3"
   [[menu.main]]
-  name="书目"
-  url="/bibliography/"
-  weight="4"
+  # name="书目"
+  # url="/bibliography/"
+  # weight="4"
   [[menu.main]]
   name="关于"
   url="/about/"
-  weight="5"
+  weight="4"
 
 # 自定义参数
 [params]

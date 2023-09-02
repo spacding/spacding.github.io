@@ -1,5 +1,5 @@
 ---
-title: "观影"
+title: "我的观影"
 sitemap:
   priority : 0.1
 layout: "movies"
